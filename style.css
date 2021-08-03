@@ -1,0 +1,133 @@
+body {
+    background-color: green;
+    transition: background-color .5s;
+}
+
+/* any element with the class ".flex" will be displayed in flex */
+
+.flex { 
+    display: flex;
+}
+
+/* any element with the class ".column" will follow the column direction */
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+/* any element with the  class ".justify-center" will center the flex-content */
+
+.justify-center {
+    justify-content: center;
+}
+
+/* any element with the class ".items-center" will center all the flex items */
+.items-center {
+    align-items: center;
+}
+
+.player {
+    height: 95vh;
+    display: flex;
+}    
+.details {
+    margin-top: 25px;
+}
+
+.track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    background-image: url("img/media\ player.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15%;
+}
+
+.now-playing {
+    font-size: 1rem;
+}
+
+.track-name {
+    font-size: 3rem;
+}
+
+.track-artist {
+    font-size: 1.5rem;
+}
+
+.playpause-track,
+.next-track,
+.prev-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity, .2s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1;
+}
+
+.slider_container {
+    width: 75%;
+    max-width: 400px;
+
+}
+
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background-color: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1;
+}
+
+.seek_slider {
+    width: 60%;
+}
+
+.volume_slider {
+    width: 30%;
+}
+.current-time,
+.total-duration {
+    padding: 12px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 12px;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+    cursor: pointer;
+}

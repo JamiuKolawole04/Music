@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 25px;
+        }
+        
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        .down {
+            transform: rotate(45deg);
+        }
+        p.par-1 {
+            color: blue;
+        }
+    </style>
+    <title>Event</title>
+</head>
+<body>
+    <p class="par-1" id="paragraph">Where art thou? </p>
+    <p class="par-2" id="paragraphTwo">I love programming, business/investment, God and Family</p>
+     <p id="parTwo">Where is my money?</p>
+     <p id="parThree">I leave in Washinton DC</p>
+     <p id="parFour">I want to own an estate in Miami</p>
+     <p id="parFive">I want to own an estate in LasVegas, Florida, Newyork city, Ohio, Texas, Alabama</p>
+ 
+     <p>Right arrow : <i classs="arrow right"></i></p>
+     <p>Left arrow : <i class="arrow left"></i></p>
+     <p>Up arrow <i class="arrow up"></i></p>
+     <p>Down arrow : <i class="arrow down"></i></p>
+    <script>
+        let noAppear = document.querySelector('#paragraph') ;
+        noAppear.style.display = "none" ;
+        paragraph.onmouseover = function() {
+            paragraph.style.color = 'red';
+        }
+
+        paragraph.onmouseleave = function() {
+            paragraph.style.color = 'blue' ;
+        }
+
+        function handler1() {
+            paragraphTwo.style.color = 'red';
+        };
+
+        function handler2() {
+            paragraphTwo.style.color = 'orange' ;
+        };
+
+        paragraphTwo.addEventListener("mouseover", handler1) ;
+        paragraphTwo.addEventListener("mouseleave", handler2) ;
+
+        parTwo.onmouseover = function() {
+            let hidden, hiddenTwo ;
+            hidden = document.querySelector('#parThree') ;
+        }
+        
+
+        parFive.addEventListener("mouseover", function changeColor() {
+            document.querySelector('#parFive').style.color = 'purple' ;
+        }) ;
+    </script>
+</body>
+</html>
